@@ -1,19 +1,12 @@
-﻿using System;
+﻿using LinkedListProg.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ashish.LinkedList
+namespace LinkedListProg.Areas
 {
-
-    public class Node
-    {
-        public Node next;
-        public Object data;
-    }
-
-
     public class LinkedList
     {
         public static Node head = null;
@@ -114,39 +107,6 @@ namespace Ashish.LinkedList
             // Store pointer to the next of node to be deleted
             Node next = temp.next.next;
             temp.next = next; // Unlink the deleted node from list
-            
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            LinkedList linkedlist = new LinkedList();
-            linkedlist.Add("15");
-            linkedlist.Add("85");
-            linkedlist.Add("12");
-            linkedlist.Add("41");
-            linkedlist.Add("31");
-            linkedlist.Add("53");
-            linkedlist.Add("69");
-            linkedlist.Add("44");
-            linkedlist.Add("75");
-            linkedlist.Add("69");
-            linkedlist.Add("11");
-            linkedlist.PrintAllNodes();
-
-            Console.WriteLine("finish..");
-
-
-            linkedlist.Delete(3);
-
-            linkedlist.PrintAllNodes();
-
-
-            linkedlist.PrintReverseList(3);
-            linkedlist.PrintAllNodes();
-            Console.ReadLine();
 
         }
     }
