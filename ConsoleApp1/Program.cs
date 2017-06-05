@@ -72,6 +72,10 @@ namespace Ashish.LinkedList
             return prev;
         }
 
+        /// <summary>
+        /// Print the reverse linked list
+        /// </summary>
+        /// <param name="k"></param>
         internal void PrintReverseList(int k)
         {
             head = Reverse(head, k);
