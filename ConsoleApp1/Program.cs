@@ -30,7 +30,6 @@ namespace LinkedListProg
 
             linkedlist.PrintAllNodes();
 
-
             Console.WriteLine("Reverse of linked list in group of 3\n\r");
             linkedlist.PrintReverseList(3);
             linkedlist.PrintAllNodes();

@@ -34,13 +34,11 @@ namespace LinkedListProg.Areas
             {
                 Node toAdd = new Node();
                 toAdd.data = data;
-
                 Node current = head;
                 while (current.next != null)
                 {
                     current = current.next;
                 }
-
                 current.next = toAdd;
             }
         }
@@ -61,7 +59,7 @@ namespace LinkedListProg.Areas
             }
             if (next != null)
             { head.next = Reverse(next, k); }
-
+            
             return prev;
         }
 
@@ -74,6 +72,10 @@ namespace LinkedListProg.Areas
             head = Reverse(head, k);
         }
 
+        /// <summary>
+        /// Delete the node from the linked list
+        /// </summary>
+        /// <param name="position"></param>
         internal void Delete(int position)
         {
             if (head == null)
@@ -92,7 +94,7 @@ namespace LinkedListProg.Areas
             }
 
             // find the previous node of the node to be deleted
-            for (int i = 0; temp != null && i < position - 1; i++)
+            for (int i = 0; temp != null && i < (position - 1); i++)
             {
                 temp = temp.next;
             }
