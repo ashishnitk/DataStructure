@@ -12,23 +12,33 @@ namespace Trees
         static void Main(string[] args)
         {
             BinaryTree tree = new BinaryTree();
-            tree.Add(2);
+            tree.Add(10);
             tree.Add(5);
             tree.Add(1);
             tree.Add(9);
             tree.Add(12);
             tree.Add(22);
-            tree.Add(12);
-            tree.Add(8);
-            tree.Add(7);
+            tree.Add(11);
+            
+            
+            // Get Height of the tree
+            int h =tree.Height(BinaryTree.root);
+
+
+            for (int i = 1; i <= h; i++)
+            {
+                tree.PrintGivenLevel(BinaryTree.root,i);
+            }
+
+            tree.PreOrderTraversal(BinaryTree.root);
+            tree.InOrderTraversal(BinaryTree.root);
+            tree.PostOrderTraversal(BinaryTree.root);
+
+
+           
 
             tree.GetPrint2DUtil();
-
-            // Get Height of the tree
-            Console.WriteLine(tree.GetHeight());
-
-
-
+            
         }
     }
 }

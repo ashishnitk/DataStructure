@@ -43,6 +43,48 @@ namespace Trees.Areas
 
         }
 
+        internal void PrintGivenLevel(Node root, int level)
+        {
+            if (root == null)
+                return;
+            if (level == 1)
+                Console.WriteLine(root.data); 
+            else if (level > 1)
+            {
+                PrintGivenLevel(root.left, level - 1);
+                PrintGivenLevel(root.right, level - 1);
+            }
+        }
+
+        internal void PreOrderTraversal(Node root)
+        {
+            Console.WriteLine(root.data);
+
+            if (root.left != null)
+                PreOrderTraversal(root.left);
+            if (root.right != null)
+                PreOrderTraversal(root.right);
+        }
+
+        internal void InOrderTraversal(Node root)
+        {
+            if (root.left != null)
+                InOrderTraversal(root.left);
+            Console.WriteLine(root.data);
+
+            if (root.right != null)
+                InOrderTraversal(root.right);
+        }
+
+        internal void PostOrderTraversal(Node root)
+        {
+            if (root.left != null)
+                PostOrderTraversal(root.left);
+            if (root.right != null)
+                PostOrderTraversal(root.right);
+            Console.WriteLine(root.data);
+        }
+
         /// <summary>
         ///If root is NULL
         ///   then create root node
@@ -163,13 +205,7 @@ namespace Trees.Areas
         /// Get height of the tree
         /// </summary>
         /// <returns></returns>
-        public int GetHeight()
-        {
-            return Height(root);
-        }
-
-
-        private int Height(Node root)
+        public int Height(Node root)
         {
             if (root == null)
                 return 0;
@@ -187,4 +223,6 @@ namespace Trees.Areas
 
 
     }
+
+
 }
