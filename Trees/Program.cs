@@ -25,6 +25,7 @@ namespace Trees
             int h =tree.Height(BinaryTree.root);
 
 
+            // level order traversal
             for (int i = 1; i <= h; i++)
             {
                 tree.PrintGivenLevel(BinaryTree.root,i);
