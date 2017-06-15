@@ -32,25 +32,28 @@ namespace Trees
             BinaryTree.root.Print();
             // Get Height of the tree
             int h = tree.Height(BinaryTree.root);
-            Console.WriteLine("\nHeight of the tree is "+ h.ToString());
-
-
-            // level order traversal
-            for (int i = 1; i <= h; i++)
-            {
-                tree.PrintGivenLevel(BinaryTree.root, i);
-            }
-
-            // spiral traversal
+            Console.WriteLine("\nHeight of the tree is " + h.ToString());
+                      
 
             tree.PreOrderTraversal(BinaryTree.root);
+
             tree.InOrderTraversal(BinaryTree.root);
+
             tree.PostOrderTraversal(BinaryTree.root);
 
+            bool flag = true;
+            Console.WriteLine("Level order traversal\n");
+            for (int i = 1; i <= h; i++)
+            {
+                tree.PrintGivenLevel(BinaryTree.root, i, flag);
+            }
 
-
-
-            tree.GetPrint2DUtil();
+            Console.WriteLine("Spiral traversal using level order traversal\n");
+            for (int i = 1; i <= h; i++)
+            {
+                tree.PrintGivenLevel(BinaryTree.root, i, flag);
+                flag = !flag;
+            }
 
         }
     }

@@ -10,52 +10,8 @@ namespace Trees.Areas
     public class BinaryTree
     {
         public static Node root = null;
-      
 
-
-        internal void PrintGivenLevel(Node root, int level)
-        {
-            if (root == null)
-                return;
-            if (level == 1)
-                Console.WriteLine(root.data); 
-            else if (level > 1)
-            {
-                PrintGivenLevel(root.left, level - 1);
-                PrintGivenLevel(root.right, level - 1);
-            }
-        }
-
-        internal void PreOrderTraversal(Node root)
-        {
-            Console.WriteLine(root.data);
-
-            if (root.left != null)
-                PreOrderTraversal(root.left);
-            if (root.right != null)
-                PreOrderTraversal(root.right);
-        }
-
-        internal void InOrderTraversal(Node root)
-        {
-            if (root.left != null)
-                InOrderTraversal(root.left);
-            Console.WriteLine(root.data);
-
-            if (root.right != null)
-                InOrderTraversal(root.right);
-        }
-
-        internal void PostOrderTraversal(Node root)
-        {
-            if (root.left != null)
-                PostOrderTraversal(root.left);
-            if (root.right != null)
-                PostOrderTraversal(root.right);
-            Console.WriteLine(root.data);
-        }
-
-        /// <summary>
+        /// <summary> ADD ITEMS TO THE TREE
         ///If root is NULL
         ///   then create root node
         ///return
@@ -125,6 +81,79 @@ namespace Trees.Areas
         }
 
         /// <summary>
+        /// Get height of the tree
+        /// </summary>
+        /// <returns></returns>
+        public int Height(Node root)
+        {
+            if (root == null)
+                return 0;
+            else
+            {
+                int lheight = Height(root.left);
+                int rheight = Height(root.right);
+
+                if (lheight > rheight)
+                    return (lheight + 1);
+                else
+                    return (rheight + 1);
+            }
+        }
+
+        #region OrderTraversal
+        internal void PrintGivenLevel(Node root, int level, bool flag)
+        {
+            if (root == null)
+                return;
+            if (level == 1)
+                Console.WriteLine(root.data);
+            else if (level > 1)
+            {
+                if (flag)
+                {
+                    PrintGivenLevel(root.left, level - 1, flag);
+                    PrintGivenLevel(root.right, level - 1, flag);
+                }
+                else
+                {
+                    PrintGivenLevel(root.right, level - 1, flag);
+                    PrintGivenLevel(root.left, level - 1, flag);
+                }
+
+            }
+        }
+
+        internal void PreOrderTraversal(Node root)
+        {
+            Console.WriteLine(root.data);
+
+            if (root.left != null)
+                PreOrderTraversal(root.left);
+            if (root.right != null)
+                PreOrderTraversal(root.right);
+        }
+
+        internal void InOrderTraversal(Node root)
+        {
+            if (root.left != null)
+                InOrderTraversal(root.left);
+            Console.WriteLine(root.data);
+
+            if (root.right != null)
+                InOrderTraversal(root.right);
+        }
+
+        internal void PostOrderTraversal(Node root)
+        {
+            if (root.left != null)
+                PostOrderTraversal(root.left);
+            if (root.right != null)
+                PostOrderTraversal(root.right);
+            Console.WriteLine(root.data);
+        }
+        #endregion
+
+        /// <summary> SEARCH A ITEM IN A TREE
         /// If root.data is equal to search.data
         ///   return root
         ///else
@@ -171,24 +200,6 @@ namespace Trees.Areas
             return null;
         }
 
-        /// <summary>
-        /// Get height of the tree
-        /// </summary>
-        /// <returns></returns>
-        public int Height(Node root)
-        {
-            if (root == null)
-                return 0;
-            else
-            {
-                int lheight = Height(root.left);
-                int rheight = Height(root.right);
 
-                if (lheight > rheight)
-                    return (lheight + 1);
-                else
-                    return (rheight + 1);
-            }
-        }
     }
 }
