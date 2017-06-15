@@ -10,38 +10,8 @@ namespace Trees.Areas
     public class BinaryTree
     {
         public static Node root = null;
-        const int COUNT = 1;
-        /// <summary>
-        /// Function to print binary tree in 2D
-        /// It does reverse inorder traversal
-        /// </summary>
-        internal void GetPrint2DUtil()
-        {
-            Print2DUtil(root, 0);
-        }
+      
 
-        private void Print2DUtil(Node root, int space)
-        {
-            if (root == null)
-                return;
-
-            // Increase distance between levels
-            space += COUNT;
-
-            // Process right child first
-            Print2DUtil(root.right, space);
-
-            // Print current node after space
-            // count
-            Console.WriteLine("\n");
-            for (int i = COUNT; i < space; i++)
-                Console.WriteLine(" ");
-            Console.WriteLine(root.data + "\n");
-
-            // Process left child
-            Print2DUtil(root.left, space);
-
-        }
 
         internal void PrintGivenLevel(Node root, int level)
         {
@@ -220,9 +190,5 @@ namespace Trees.Areas
                     return (rheight + 1);
             }
         }
-
-
     }
-
-
 }

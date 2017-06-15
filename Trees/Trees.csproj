@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Print.cs" />
     <Compile Include="Areas\Tree.cs" />
     <Compile Include="Models\Node.cs" />
     <Compile Include="Program.cs" />
