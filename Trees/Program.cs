@@ -31,6 +31,8 @@ namespace Trees
                 tree.PrintGivenLevel(BinaryTree.root,i);
             }
 
+            // spiral traversal
+
             tree.PreOrderTraversal(BinaryTree.root);
             tree.InOrderTraversal(BinaryTree.root);
             tree.PostOrderTraversal(BinaryTree.root);
