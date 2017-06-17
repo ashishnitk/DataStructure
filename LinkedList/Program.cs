@@ -23,9 +23,9 @@ namespace LinkedListProg
             linkedlist.Add("11");
             linkedlist.PrintAllNodes();
 
-            Console.WriteLine("finish..\n\r");
-
-            Console.WriteLine("Delete 4th Node in the list\n\r");
+            linkedlist.RemoveDuplicates();
+           
+            Console.WriteLine("\n\rDelete 4th Node in the list\n\r");
             linkedlist.Delete(4);
 
             linkedlist.PrintAllNodes();

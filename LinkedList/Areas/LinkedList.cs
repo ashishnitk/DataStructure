@@ -11,15 +11,48 @@ namespace LinkedListProg.Areas
     {
         public static Node head = null;
 
+
+
+        /// <summary>
+        /// Traverse from head and print all nodes value
+        /// </summary>
+
         public void PrintAllNodes()
         {
-            Node cur = head;
-            while (cur.next != null)
+            //Traverse from head
+            Console.Write("Head ->");
+            Node curr = head;
+            while (curr.next != null)
             {
-                Console.WriteLine(cur.data);
-                cur = cur.next;
+                curr = curr.next;
+                Console.Write(curr.data);
+                Console.Write("->");
             }
+            Console.Write("NULL");
         }
+
+        internal void RemoveDuplicates()
+        {
+            Node curr = head;
+
+            while (curr.next!=null)
+            {
+
+                curr = curr.next;
+            }
+
+            throw new NotImplementedException();
+        }
+
+        //public void PrintAllNodes()
+        //{
+        //    Node cur = head;
+        //    while (cur.next != null)
+        //    {
+        //        Console.WriteLine(cur.data);
+        //        cur = cur.next;
+        //    }
+        //}
 
         public void Add(Object data)
         {
