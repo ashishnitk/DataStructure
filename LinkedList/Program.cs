@@ -12,19 +12,30 @@ namespace LinkedListProg
             LinkedList linkedlist = new LinkedList();
             linkedlist.Add("15");
             linkedlist.Add("85");
+            linkedlist.Add("85");
             linkedlist.Add("12");
             linkedlist.Add("41");
+            linkedlist.Add("41");
+            linkedlist.Add("41");
+            linkedlist.Add("41");
+            linkedlist.Add("41");
+            linkedlist.Add("41");
+            linkedlist.Add("41");
+            linkedlist.Add("69");
+
             linkedlist.Add("31");
             linkedlist.Add("53");
             linkedlist.Add("69");
             linkedlist.Add("44");
             linkedlist.Add("75");
+            linkedlist.Add("41");
             linkedlist.Add("69");
             linkedlist.Add("11");
             linkedlist.PrintAllNodes();
 
             linkedlist.RemoveDuplicates();
-           
+            linkedlist.PrintAllNodes();
+
             Console.WriteLine("\n\rDelete 4th Node in the list\n\r");
             linkedlist.Delete(4);
 

@@ -20,7 +20,7 @@ namespace LinkedListProg.Areas
         public void PrintAllNodes()
         {
             //Traverse from head
-            Console.Write("Head ->");
+            Console.Write("\n\r Head ->");
             Node curr = head;
             while (curr.next != null)
             {
@@ -31,17 +31,25 @@ namespace LinkedListProg.Areas
             Console.Write("NULL");
         }
 
-        internal void RemoveDuplicates()
+        internal Node RemoveDuplicates()
         {
             Node curr = head;
-
-            while (curr.next!=null)
+            Node prev = null;
+            List<string> uniqueItemList = new List<string>();
+            while (curr.next != null)
             {
-
+                if (uniqueItemList.Contains((string)curr.data))
+                {
+                    prev.next = curr.next;
+                }
+                else
+                {
+                    uniqueItemList.Add((string)curr.data);
+                    prev = curr;
+                }
                 curr = curr.next;
             }
-
-            throw new NotImplementedException();
+            return head;
         }
 
         //public void PrintAllNodes()
@@ -92,7 +100,7 @@ namespace LinkedListProg.Areas
             }
             if (next != null)
             { head.next = Reverse(next, k); }
-            
+
             return prev;
         }
 
