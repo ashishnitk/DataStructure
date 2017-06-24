@@ -1,9 +1,6 @@
 ﻿using LinkedListProg.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinkedListProg.Areas
 {
@@ -52,16 +49,7 @@ namespace LinkedListProg.Areas
             return head;
         }
 
-        //public void PrintAllNodes()
-        //{
-        //    Node cur = head;
-        //    while (cur.next != null)
-        //    {
-        //        Console.WriteLine(cur.data);
-        //        cur = cur.next;
-        //    }
-        //}
-
+  
         public void Add(Object data)
         {
             if (head == null)
