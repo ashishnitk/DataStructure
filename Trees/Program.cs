@@ -30,14 +30,22 @@ namespace Trees
             tree.Add(47);
 
             BinaryTree.root.Print();
+
+            Node lca = tree.lca(BinaryTree.root, 25, 74);
+            Console.WriteLine(lca.data);
+
             // Get Height of the tree
             int h = tree.Height(BinaryTree.root);
             Console.WriteLine("\nHeight of the tree is " + h.ToString());
-                      
+
+            Console.WriteLine("\n preorder traversal \n");
 
             tree.PreOrderTraversal(BinaryTree.root);
 
+            Console.WriteLine("\n Inorder traversal \n");
             tree.InOrderTraversal(BinaryTree.root);
+
+            Console.WriteLine("\n postorder traversal \n");
 
             tree.PostOrderTraversal(BinaryTree.root);
 
@@ -54,6 +62,7 @@ namespace Trees
                 tree.PrintGivenLevel(BinaryTree.root, i, flag);
                 flag = !flag;
             }
+
 
         }
     }
