@@ -200,7 +200,7 @@ namespace Trees.Areas
             return null;
         }
 
-
+        // Lowest Common Ancestor in a Binary Tree
         public Node lca(Node node, int n1, int n2)
         {
             if (node == null)
