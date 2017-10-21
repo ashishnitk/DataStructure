@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\AddNode.cs" />
+    <Compile Include="Areas\Lowest Common Ancestor.cs" />
+    <Compile Include="Areas\OrderTraversal.cs" />
     <Compile Include="Areas\Print.cs" />
     <Compile Include="Areas\Tree.cs" />
     <Compile Include="Models\Node.cs" />
