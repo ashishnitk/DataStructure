@@ -11,6 +11,7 @@ namespace Trees.Areas
     {
         public static Node root = null;
 
+
         /// <summary> ADD ITEMS TO THE TREE
         ///If root is NULL
         ///   then create root node

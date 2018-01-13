@@ -45,6 +45,7 @@
     <Compile Include="Areas\AddNode.cs" />
     <Compile Include="Areas\Lowest Common Ancestor.cs" />
     <Compile Include="Areas\OrderTraversal.cs" />
+    <Compile Include="Areas\PrintAllNodesAtDistanceK.cs" />
     <Compile Include="Areas\PrintTree.cs" />
     <Compile Include="Areas\Tree.cs" />
     <Compile Include="Models\Node.cs" />

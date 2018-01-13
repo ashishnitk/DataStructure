@@ -30,6 +30,8 @@ namespace Trees
             tree.Add(47);
 
             BinaryTree.root.Print();
+            Node target = BinaryTree.root.right.left;
+            tree.PrintkDistanceNode(BinaryTree.root,target,2);
 
             Node lca = tree.lca(BinaryTree.root, 25, 74);
             Console.WriteLine(lca.data);
