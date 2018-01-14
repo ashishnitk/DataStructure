@@ -43,10 +43,27 @@ namespace ArrayDataStructure
             return j;
         }
 
+
+        public static void printRepeating(int[] arr, int size)
+        {
+            int i;
+
+            for (i = 0; i < size; i++)
+            {
+                if (arr[Math.Abs(arr[i])] > 0)
+                    arr[Math.Abs(arr[i])] = -arr[Math.Abs(arr[i])];
+                else
+                    Console.WriteLine(Math.Abs(arr[i]) + " ");
+            }
+        }
+
+
         static void Main(string[] args)
         {
-            int[] arr = { 4,1,7, 2, 2, 3, 4, 7, 4, 5, 5 };
+            int[] arr = { 4, 1, 7, 2, 2, 3, 4, 7, 4, 5, 5 };
             int n = arr.Length;
+
+            printRepeating(arr, n);
 
             n = removeDuplicates(arr, n);
 

@@ -32,6 +32,29 @@ namespace Trees.Areas
             }
         }
 
+        internal void LevelOrderTraversal(Node root, int level)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            if (level == 1)
+                Console.WriteLine(root.data);
+            else if (level > 1)
+            {
+                LevelOrderTraversal(root.left, level - 1);
+                LevelOrderTraversal(root.right, level - 1);
+            }
+        }
+
+        internal void C_LevelOrderTraversal(Node root, int level)
+        {
+            for (int i = 0; i < level; i++)
+            {
+                LevelOrderTraversal(root, level);
+            }
+        }
+
         internal void PreOrderTraversal(Node root)
         {
             Console.WriteLine(root.data);

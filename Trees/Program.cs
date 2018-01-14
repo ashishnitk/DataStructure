@@ -30,15 +30,34 @@ namespace Trees
             tree.Add(47);
 
             BinaryTree.root.Print();
-            Node target = BinaryTree.root.right.left;
-            tree.PrintkDistanceNode(BinaryTree.root,target,2);
+            //Node target = BinaryTree.root.right.left;
+            //tree.PrintkDistanceNode(BinaryTree.root, target, 2);
 
-            Node lca = tree.lca(BinaryTree.root, 25, 74);
-            Console.WriteLine(lca.data);
+            //Node lca = tree.lca(BinaryTree.root, 25, 74);
+            //Console.WriteLine(lca.data);
+            bool flag = true;
 
             // Get Height of the tree
             int h = tree.Height(BinaryTree.root);
             Console.WriteLine("\nHeight of the tree is " + h.ToString());
+
+            Console.WriteLine("Level order traversal\n");
+            for (int i = 1; i <= h; i++)
+            {
+                tree.LevelOrderTraversal(BinaryTree.root, i);
+            }
+
+            Console.WriteLine("Spiral traversal using level order traversal\n");
+            for (int i = 1; i <= h; i++)
+            {
+                tree.PrintGivenLevel(BinaryTree.root, i, flag);
+                flag = !flag;
+            }
+
+
+            Console.WriteLine("\n level order traversal \n");
+
+            tree.C_LevelOrderTraversal(BinaryTree.root, h);
 
             Console.WriteLine("\n preorder traversal \n");
 
@@ -51,7 +70,6 @@ namespace Trees
 
             tree.PostOrderTraversal(BinaryTree.root);
 
-            bool flag = true;
             Console.WriteLine("Level order traversal\n");
             for (int i = 1; i <= h; i++)
             {
